@@ -3,6 +3,7 @@ import { headers } from 'next/headers';
 import { Inter } from 'next/font/google';
 import { Suspense } from 'react';
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { getBaseUrl } from '@/lib/get-base-url';
 import { Providers } from './Providers';
 import '@umami/react-zen/styles.full.css';
@@ -42,6 +43,7 @@ export default function ({ children }) {
           <Providers>{children}</Providers>
         </Suspense>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
